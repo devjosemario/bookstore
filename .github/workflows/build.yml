@@ -1,11 +1,13 @@
-name: Python Pull Request Workflow
+name: Python application
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  quality:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
